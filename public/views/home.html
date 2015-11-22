@@ -1,0 +1,24 @@
+<ng-include src="'/views/home-header.html'"></ng-include>
+
+<div class="home-content"></div>
+
+   <div class="sub-nav">
+        <div class="button-container">
+             
+         </div>
+        
+    </div>
+
+<div class="eventInfoContainer">
+	<div class="eventListItem" ng-repeat="item in events">
+            			<div class="result-list-item-name"><h1>{{ item.eventName }}</h1></div>
+            			<div class="result-list-item-location-name"> {{item.locationName}} </div>
+            			<div class="result-list-item-date"> {{item.date.start}} - {{item.date.end}} </div>
+                        <div class="result-list-item-tag-container"> 
+                          <div class="result-list-item-tag">Music</div>
+                          <div class="result-list-item-tag">Live Music</div>
+                          <div class="result-list-item-tag">21+</div>
+                          <div class="result-list-item-tag">Sports</div>
+                        </div>
+            		</div>
+</div>

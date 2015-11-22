@@ -1,0 +1,9 @@
+<nav class="profile-header" ng-controller="NavController">
+	<div class="nav-button-container">
+		<a href="/user/post"><div class="nav-button" ng-class="{ active: isActive('/user/post')}" >New Event</div></a>
+		<a href="/user/events">	 <div class="nav-button" ng-class="{ active: isActive('/user/events')}" >My Events</div></a>
+		<a href="/events"><div class="nav-button" ng-class="{ active: isActive('/events')}" >All Events</div></a>
+		<a href="/user/post"><div class="nav-button" ng-class="{ active: isActive('/map')}" >Toggle Map</div></a>
+		<a href="/"><div class="nav-button" ng-class="{ active: isActive('/logout')}" >Logout</div></a>
+	</div>
+</nav>

@@ -1,0 +1,166 @@
+@font-face {
+	font-family: "ec-font";
+	src: url(Font.woff);
+}
+
+
+
+
+html,body{
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	color: black;
+	font-family: ec-font;
+
+}
+
+a{
+	text-decoration: none;
+
+}
+
+a:visited{
+	color: inherit;
+}
+/*6D1770*/
+/*7D6E8F*/
+
+header{
+	height: 40px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-family: ec-font;
+	z-index: 500000000;
+
+	
+
+}
+
+.navLogo{
+	position: absolute;
+	height: 40px;
+	width: auto;
+	top: 0px;
+	left: 150px;
+	font-size: 30px;
+	color: #6B3893;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav ul {
+	position: absolute;
+	float: left;
+	display: inline;
+	right: 150px;
+	top: 10px;
+	margin: 0px;
+	padding-right: 0px;
+	height: 30px;
+
+}
+
+nav ul li{
+	display: inline;
+	margin: 5px;
+	font-size: 18px;
+	text-decoration: none;
+	color: #6B3893;
+	padding-right: 10px;
+	text-transform: uppercase;
+
+
+}
+
+nav ul li:nth-child(1){
+border-right: 1px solid #6B3893;
+
+}
+
+.subNav{
+	height: 60px;
+	width: 100%;
+	top: 40px;
+	left: 0px;
+	position: relative;
+	background-color: #6B3893;
+	z-index: 5000;
+	-webkit-box-shadow: 0px -2px 11px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -2px 11px 1px rgba(0,0,0,0.75);
+box-shadow: 0px -2px 11px 1px rgba(0,0,0,0.75);
+}
+
+.subNav .button-container{
+	position: absolute;
+	height: 100%;
+	float: left;
+	left: 150px;
+}
+.sub-nav-button{
+	position: relative;
+	height: 25px;
+	width: 125px;
+	
+	padding-top: 20px;
+	float: left;
+	background-color: #6B3893;
+	color: white;
+	margin-left: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.sub-nav-button:hover{
+	background-color: white;
+	color: #6B3893;
+}
+
+#form-container{
+	position: absolute;
+	top: 500px;
+	height: 1000px;
+	overflow: scroll;
+
+}
+
+
+.leafletContainer{
+	position: relative;
+	height: 700px;
+	width: 70%;
+}
+
+.eventInfoContainer{
+	position:absolute;
+	width: 30%;
+	left: 70%;
+	height: 95%;
+	top: 100px;
+	border-left: 3px solid #6B3893;
+	overflow-y: scroll;
+/*	-webkit-box-shadow: -23px 3px 29px -23px rgba(0,0,0,0.75);
+-moz-box-shadow: -23px 3px 29px -23px rgba(0,0,0,0.75);
+box-shadow: -23px 3px 29px -23px rgba(0,0,0,0.75);*/
+
+}
+
+.eventListItem {
+	position: relative;
+	height: 150px;
+	width: 100%;
+	border-bottom: 1px solid black;
+
+}
+
+
+
+.ecContent{
+	position: relative;
+	top: 152px;
+}
+

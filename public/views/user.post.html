@@ -1,0 +1,111 @@
+<div class="post-content" ng-controller="PostController">
+   <div class="tags-container">
+      <h3>Select all that Apply..</h3>
+      <div class="tag-content">
+         <div class="tag-repeat" ng-repeat="tag in tags">
+            <div class="tag" ng-model="tag.chosen" ng-click="selectTag($index)" ng-class="{selected: tag.chosen}"> {{ tag.text }}</div>
+         </div>
+      </div>
+   </div>
+   <div id="form-container">
+      <h3> Event Details </h3>
+      <!-- Form -->
+      <form class="form-horizontal" id="form" ng-submit="submitEvent()">
+         <fieldset>
+            <!-- Text input-->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="EventName">Event Name</label>
+               <div class="col-md-4">
+                  <input id="EventName" name="EventName" ng-model="newEvent.eventName" type="text" placeholder="Enter Event Name" class="form-control input-md" required="">
+               </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="EventDate">Event Date</label>
+               <div class="col-md-4">
+                  <input id="EventDate" name="EventDate" ng-model="newEvent.eventDate" type="text" placeholder="Enter Event Date" class="form-control input-md" required="">
+               </div>
+            </div>
+            <!-- Button Drop Down -->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="buttondropdown">Start Time</label>
+               <div class="col-md-4">
+                  <div class="input-group">
+                     <input id="StartTime" name="buttondropdown" ng-model="newEvent.eventStart" class="form-control" placeholder="Start Time" type="text" required="">
+                     <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Select
+                        <span class="caret"></span>
+                        </button>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Button Drop Down -->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="buttondropdown">End Time</label>
+               <div class="col-md-4">
+                  <div class="input-group">
+                     <input id="EndTime" name="buttondropdown" ng-model="newEvent.eventEnd" class="form-control" placeholder="End Time" type="text">
+                     <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Select
+                        <span class="caret"></span>
+                        </button>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="locationName">Location Name</label>
+               <div class="col-md-4">
+                  <input id="LocationName" name="locationName" ng-model="newEvent.locationName" type="text" placeholder="Enter Location Name" class="form-control input-md" required="">
+               </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="address">Address</label>
+               <div class="col-md-4">
+                  <input id="address" name="address" ng-model="newEvent.address" type="text" placeholder="Enter Address" class="form-control input-md" required="">
+               </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="cost">Cost</label>
+               <div class="col-md-4">
+                  <input id="cost" name="cost" ng-model="newEvent.cost" type="text" placeholder="Enter Cost/Person" class="form-control input-md" required="">
+               </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="url">Enter URL</label>
+               <div class="col-md-4">
+                  <input id="url" name="url" ng-model="newEvent.url" type="text" placeholder="URL" class="form-control input-md">
+               </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="phone">Phone</label>
+               <div class="col-md-4">
+                  <input id="phone" name="phone" ng-model="newEvent.phone" type="text" placeholder="Enter Phone" class="form-control input-md">
+               </div>
+            </div>
+            <!-- Textarea -->
+            <div class="form-group">
+               <label class="col-md-4 control-label" for="description">Event Description</label>
+               <div class="col-md-4">
+                  <textarea class="form-control"  ng-model="newEvent.descript" id="description" placeholder="Description" name="description"></textarea>
+               </div>
+            </div>
+         </fieldset>
+         
+      </form>
+   </div>
+   <div class="button-container">
+      <button id="submit-button" type="submit" ng-click="submitEvent()" class="btn btn-primary" value="Submit">Submit</button>
+      <button id="clear-button" class="btn btn-primary"  value="Clear">Clear</button>
+   </div>
+</div>

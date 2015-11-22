@@ -1,0 +1,275 @@
+<!-- index.html -->
+<!doctype html>
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="event">
+   <head>
+      <!-- META -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Optimize mobile viewport -->
+      <title>EventCirlce | Do Something</title>
+      <!-- Bootstrap Core CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- jQuery UI -->
+      <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+      <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+      <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+      <!-- Custom CSS -->
+      <link href="css/landing-page.css" rel="stylesheet">
+      <!-- Custom Fonts -->
+      <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+      <!-- SPELLS -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script><!-- load angular -->
+      <!-- Angular -->
+      <script src="js/app.js"></script>
+   </head>
+   <!-- SET THE CONTROLLER AND GET ALL TODOS -->
+   <body ng-controller="MainCtrl">
+      <nav>
+      </nav>
+      <div id="logo"></div>
+      <div id="background-container"></div>
+      <div id="thank-you">
+         <span id="close-button">X</span>
+         <br><br>
+         <h1>Success!</h1>
+         <h2>Your event was succesfully posted to our system. <br/></br>Check back for updates in the weeks to come!<br><br>-The EventCircle Team</h2>
+      </div>
+      <div id="form-container">
+         <!-- Form -->
+         <form class="form-horizontal" id="form" ng-submit="submitEvent()">
+            <fieldset>
+               <!-- Text input-->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="EventName">Event Name</label>  
+                  <div class="col-md-4">
+                     <input id="EventName" name="EventName" ng-model="newEvent.eventName" type="text" placeholder="Enter Event Name" class="form-control input-md" required="">
+                  </div>
+               </div>
+               <!-- Text input-->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="EventDate">Event Date</label>  
+                  <div class="col-md-4">
+                     <input id="EventDate" name="EventDate" ng-model="newEvent.eventDate" type="text" placeholder="Enter Event Date" class="form-control input-md" required="">
+                  </div>
+               </div>
+               <!-- Button Drop Down -->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="buttondropdown">Start Time</label>
+                  <div class="col-md-4">
+                     <div class="input-group">
+                        <input id="StartTime" name="buttondropdown" ng-model="newEvent.eventStart" class="form-control" placeholder="Start Time" type="text" required="">
+                        <div class="input-group-btn">
+                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                           Select
+                           <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu pull-right">
+                              <li><a href="#">7:00 AM</a></li>
+                              <li><a href="#">7:30 AM</a></li>
+                              <li><a href="#">8:00 AM</a></li>
+                              <li><a href="#">8:30 AM</a></li>
+                              <li><a href="#">9:00 AM</a></li>
+                              <li><a href="#">9:30 AM</a></li>
+                              <li><a href="#">10:00 AM</a></li>
+                              <li><a href="#">10:30 AM</a></li>
+                              <li><a href="#">11:00 AM</a></li>
+                              <li><a href="#">11:30 AM</a></li>
+                              <li><a href="#">12:00 PM</a></li>
+                              <li><a href="#">12:30 PM</a></li>
+                              <li><a href="#">1:00 PM</a></li>
+                              <li><a href="#">1:30 PM</a></li>
+                              <li><a href="#">2:00 PM</a></li>
+                              <li><a href="#">2:30 PM</a></li>
+                              <li><a href="#">3:00 PM</a></li>
+                              <li><a href="#">3:30 PM</a></li>
+                              <li><a href="#">4:00 PM</a></li>
+                              <li><a href="#">4:30 PM</a></li>
+                              <li><a href="#">5:00 PM</a></li>
+                              <li><a href="#">5:30 PM</a></li>
+                              <li><a href="#">6:00 PM</a></li>
+                              <li><a href="#">6:30 PM</a></li>
+                              <li><a href="#">7:00 PM</a></li>
+                              <li><a href="#">7:30 PM</a></li>
+                              <li><a href="#">8:00 PM</a></li>
+                              <li><a href="#">8:30 PM</a></li>
+                              <li><a href="#">9:00 PM</a></li>
+                              <li><a href="#">9:30 PM</a></li>
+                              <li><a href="#">10:00 PM</a></li>
+                              <li><a href="#">10:30 PM</a></li>
+                              <li><a href="#">11:00 PM</a></li>
+                              <li><a href="#">11:30 PM</a></li>
+                              <li><a href="#">12:00 AM</a></li>
+                              <li><a href="#">12:30 AM</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Button Drop Down -->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="buttondropdown">End Time</label>
+                  <div class="col-md-4">
+                     <div class="input-group">
+                        <input id="EndTime" name="buttondropdown" ng-model="newEvent.eventEnd" class="form-control" placeholder="End Time" type="text">
+                        <div class="input-group-btn">
+                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                           Select
+                           <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu pull-right">
+                              <li><a href="#">7:00 AM</a></li>
+                              <li><a href="#">7:30 AM</a></li>
+                              <li><a href="#">8:00 AM</a></li>
+                              <li><a href="#">8:30 AM</a></li>
+                              <li><a href="#">9:00 AM</a></li>
+                              <li><a href="#">9:30 AM</a></li>
+                              <li><a href="#">10:00 AM</a></li>
+                              <li><a href="#">10:30 AM</a></li>
+                              <li><a href="#">11:00 AM</a></li>
+                              <li><a href="#">11:30 AM</a></li>
+                              <li><a href="#">12:00 PM</a></li>
+                              <li><a href="#">12:30 PM</a></li>
+                              <li><a href="#">1:00 PM</a></li>
+                              <li><a href="#">1:30 PM</a></li>
+                              <li><a href="#">2:00 PM</a></li>
+                              <li><a href="#">2:30 PM</a></li>
+                              <li><a href="#">3:00 PM</a></li>
+                              <li><a href="#">3:30 PM</a></li>
+                              <li><a href="#">4:00 PM</a></li>
+                              <li><a href="#">4:30 PM</a></li>
+                              <li><a href="#">5:00 PM</a></li>
+                              <li><a href="#">5:30 PM</a></li>
+                              <li><a href="#">6:00 PM</a></li>
+                              <li><a href="#">6:30 PM</a></li>
+                              <li><a href="#">7:00 PM</a></li>
+                              <li><a href="#">7:30 PM</a></li>
+                              <li><a href="#">8:00 PM</a></li>
+                              <li><a href="#">8:30 PM</a></li>
+                              <li><a href="#">9:00 PM</a></li>
+                              <li><a href="#">9:30 PM</a></li>
+                              <li><a href="#">10:00 PM</a></li>
+                              <li><a href="#">10:30 PM</a></li>
+                              <li><a href="#">11:00 PM</a></li>
+                              <li><a href="#">11:30 PM</a></li>
+                              <li><a href="#">12:00 AM</a></li>
+                              <li><a href="#">12:30 AM</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Text input-->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="locationName">Location Name</label>  
+                  <div class="col-md-4">
+                     <input id="LocationName" name="locationName" ng-model="newEvent.locationName" type="text" placeholder="Enter Location Name" class="form-control input-md" required="">
+                  </div>
+               </div>
+               <!-- Text input-->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="address">Address</label>  
+                  <div class="col-md-4">
+                     <input id="address" name="address" ng-model="newEvent.address" type="text" placeholder="Enter Address" class="form-control input-md" required="">
+                  </div>
+               </div>
+               <!-- Text input-->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="cost">Cost</label>  
+                  <div class="col-md-4">
+                     <input id="cost" name="cost" ng-model="newEvent.cost" type="text" placeholder="Enter Cost/Person" class="form-control input-md" required="">
+                  </div>
+               </div>
+               <!-- Text input-->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="url">Enter URL</label>  
+                  <div class="col-md-4">
+                     <input id="url" name="url" ng-model="newEvent.url" type="text" placeholder="URL" class="form-control input-md">
+                  </div>
+               </div>
+               <!-- Text input-->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="phone">Phone</label>  
+                  <div class="col-md-4">
+                     <input id="phone" name="phone" ng-model="newEvent.phone" type="text" placeholder="Enter Phone" class="form-control input-md">
+                  </div>
+               </div>
+               <!-- Textarea -->
+               <div class="form-group">
+                  <label class="col-md-4 control-label" for="description">Event Description</label>
+                  <div class="col-md-4">                     
+                     <textarea class="form-control"  ng-model="newEvent.descript" id="description" placeholder="Description" name="description"></textarea>
+                  </div>
+               </div>
+            </fieldset>
+            <div id="button-container">
+               <button id="submit-button" type="submit" class="btn btn-primary" value="Submit">Submit</button>
+               <button id="clear-button" class="btn btn-primary"  value="Clear">Clear</button>
+            </div>
+         </form>
+      </div>
+
+
+      <footer>
+         <div id="footer-logo"></div>
+      </footer>
+   </body>
+   <!-- jQuery -->
+   <script src="lib/jquery.js"></script>
+   <!-- Bootstrap Core JavaScript -->
+   <script src="lib/bootstrap.min.js"></script>
+   <script src="jquery-ui/jquery-ui.js"></script>
+</html>
+<script>
+   $(window).resize(function(){
+      build();
+   })
+   
+   var build = function(){
+   //vars
+   $windowHeight = $(window).innerHeight();
+   $width = $(window).innerWidth();
+   $formHeight = $("#form-container").height();
+   
+   if($width > 325) {$height = 800;}
+   if($width < 325) {$height = 800;}
+   
+   if($width > 991) {$height = 600};
+   
+   
+   
+   
+   //logo
+   $("#logo").css("left", ($width-250)/2);
+   //background-image container
+   $("#background-container").css("height", $height*1.7);
+   
+   //form button container
+   $("#button-container").css("left", (($width*.7)-380)/2);
+   $("#button-container").css("top", $formHeight);
+   
+   //form contanier center
+   $("#form-container").css("left", "15%");
+   //thank you
+   $("#thank-you").css("height", ($windowHeight-60));
+   
+   
+   $("footer").css("top", ($height*1.7-200));
+   
+   
+   }
+   
+   build();
+   
+   $("#EventDate").datepicker();
+   
+   
+   
+   $("#close-button").css("cursor", "pointer").click(function(){
+   $("#thank-you").fadeOut(300);
+   });
+   
+   
+   
+</script>

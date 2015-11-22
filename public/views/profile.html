@@ -1,0 +1,19 @@
+<div ng-controller="ProfileController">
+  <nav class="profile-header">
+    <div class="nav-button-container">
+      <div class="nav-button" ng-click="changeView('views/user.post.html')" ng-class="{ active: isActive('views/user.post.html')}" >New Event</div>
+      <div class="nav-button" ng-click="changeView('views/user.events.html')" ng-class="{ active: isActive('views/user.events.html')}" >My Events</div>
+      <div class="nav-button" ng-click="changeView('views/events.html')" ng-class="{ active: isActive('views/events.html')}" >All Events</div></a>
+      <div class="nav-button" ng-class="{ active: isActive('/map')}" >Toggle Map</div>
+      <div class="nav-button" ng-click="logout()" ng-class="{ active: isActive('/logout')}" >Logout</div>
+    </div>
+  </nav>
+
+  <div class="ec-content">
+
+  <div ng-include="getInclude()" class="ng-trans ng-trans-fade" ></div>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,46 @@
+
+<div ng-controller="MapController">
+
+
+ <div class="event-back-button" ng-click="showAllUserEvents()"> Back</div>
+
+
+<!-- <div class="leaflet-holder">
+  	<leaflet lf-center="kalispell" tiles="tiles" markers="markers" defaults="defaults" width="100%" height="100%"></leaflet>
+</div > -->
+
+  
+
+  <div class="event-detail">
+    <div class="detail-image" ng-click="enlargeImage()"></div>
+    <div class="detail-name">{{ selectedItemDetail.eventName }}</div>
+                      <div class="detail-date"> {{selectedItemDetail.date.start}} - {{selectedItemDetail.date.end}} </div>
+                      <div class="detail-location-name"> {{selectedItemDetail.locationName}} </div>
+                            <div class="item-tag-container"> 
+                              <div class="detail-tag">Music</div>
+                              <div class="detail-tag">Live Music</div>
+                              <div class="detail-tag">21+</div>
+                              <div class="detail-tag">Sports</div>
+                            </div>
+  </div>
+
+  <div class="event-info-container">
+    <div class="event-info-container-inside">
+
+
+    	<div class="event-list-item ng-trans ng-trans-slide-right" ng-repeat="item in events" ng-click="editEvent($index)">
+
+        <div class="item-image"></div>
+        <div class="item-detail">
+                			<div class="item-name">{{ item.eventName }}</div>
+                			<div class="item-location-name"> {{item.locationName}} </div>
+                			<div class="item-date"> {{item.date.start}} - {{item.date.end}} </div>
+                            <div class="item-tag-container"> 
+                              <div class="item-tag" ng-repeat="tag in item.tags">{{ tag }}</div>
+                            </div>
+                		</div> 
+        </div>
+    </div>
+  </div>
+
+</div>
