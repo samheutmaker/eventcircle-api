@@ -1,4 +1,4 @@
-angular.module('NerdService', [])
+angular.module('Services', [])
 
 
 .service('Events', ['$http', function($http){
