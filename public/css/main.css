@@ -83,7 +83,7 @@ header {
 .profile-header {
   position: absolute;
   height: 100%;
-  background-color: rgba(103, 65, 114, 0.7);
+  background-color: #674172;
   width: 100px;
   z-index: 9999999999999999999; }
   .profile-header .nav-button-container {
